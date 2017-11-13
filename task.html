@@ -237,7 +237,7 @@ var myusers =
       		editValue:"name",
             url: "data/users.js",
             rules:{
-    			"name":webix.rules.isNotEmpty,
+    			"name":"name":function(){if (webix.rules.isNotEmpty && !webix.rules.isNumber) return true},
     			"id":webix.rules.isNumber
 			}
           },
